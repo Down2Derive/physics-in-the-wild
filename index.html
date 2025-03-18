@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Physics In The Wild</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Orbitron', sans-serif;
+      color: #ccc;
+      background: linear-gradient(to bottom right, #1b1b2f, #161622);
+      overflow-x: hidden;
+    }
+
+    header {
+      text-align: center;
+      padding: 2rem;
+      color: #a96ce0;
+      font-size: 2.5rem;
+      letter-spacing: 2px;
+    }
+
+    .animated-bg {
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      z-index: -1;
+      background: radial-gradient(circle, rgba(169,108,224,0.2) 1px, transparent 1px);
+      background-size: 40px 40px;
+      animation: moveBackground 30s linear infinite;
+    }
+
+    @keyframes moveBackground {
+      from { background-position: 0 0; }
+      to { background-position: 1000px 1000px; }
+    }
+
+    section {
+      padding: 2rem;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    h2 {
+      color: #a96ce0;
+      border-bottom: 2px solid #a96ce0;
+      padding-bottom: 0.5rem;
+    }
+
+    a {
+      color: #a96ce0;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.9rem;
+      color: #888;
+    }
+  </style>
+</head>
+<body>
+  <div class="animated-bg"></div>
+
+  <header>Physics In The Wild</header>
+
+  <section>
+    <h2>Exploring the Dark Corners of the Universe</h2>
+    <p>Hi, I'm Jonathan James Guevara Rodriguez, an experimental physicist and science communicator. My mission is to make physics accessible, exciting, and a little bit wild. From dark matter to cosmic mysteries, I explore the universe through data, experiments, and storytelling.</p>
+  </section>
+
+  <section>
+    <h2>Current Projects</h2>
+    <ul>
+      <li>Star-Galaxy Classification with LSST Data</li>
+      <li>Data From the Void - Dark Matter Exploration</li>
+      <li>Upcoming: Interactive Plot Visualizations (coming soon)</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Contact</h2>
+    <p>Email: <a href="mailto:jonathan@physicsinthewild.com">jonathan@physicsinthewild.com</a></p>
+    <p>Website: <a href="https://www.JonathanJamesGuevaraRodriguez.com">JonathanJamesGuevaraRodriguez.com</a></p>
+  </section>
+
+  <footer>
+    &copy; 2025 Jonathan James Guevara Rodriguez | Physics In The Wild
+  </footer>
+</body>
+</html>
