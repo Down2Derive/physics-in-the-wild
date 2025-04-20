@@ -111,19 +111,23 @@
   <p> As a first-generation college student and science communicator, I’m committed to making physics approachable. I believe in translating complex concepts into engaging stories and visualizations — bridging the gap between data, discovery, and public understanding while contributing to experimental research on some of the universe’s most fundamental mysteries.</p><br>
 </section>
 
-  <section id="projects">
-  <h2>Projects, Research & Involvement</h2>
-  <p>Here are some of the projects I’m currently working on and areas I’m passionate about:</p>
+  <section id="research">
+  <h2>Research Projects</h2>
+  <p>I am actively involved in research using data from the Vera C. Rubin Observatory's Legacy Survey of Space and Time (LSST). My projects focus on classification accuracy, data analysis, and astronomical object characterization at faint magnitudes.</p>
   <ul>
-    <li><strong>Star-Galaxy Classification with LSST Data:</strong> Analyzing large-scale survey data to improve classification accuracy and explore the limits of automated object detection.</li><br>
-    <li><strong>Data From the Void — Dark Matter Exploration:</strong> Investigating the unseen mass in the universe through research concepts focused on observational evidence and experimental detection methods.</li><br>
-    <li><strong>Science Communication & Outreach:</strong> Writing, visualizing and communicating complex physics topics for general audiences — because physics belongs in the wild, not just in labs and papers.</li><br>
-    <li><strong>Interactive Data Visualizations (Coming Soon):</strong> Building visual tools and plots to represent astronomical data better.</li><br>
-    <li><strong>Physics Tutoring:</strong> Providing one-on-one and group tutoring sessions for high school and college students in physics, math, and astronomy — helping others strengthen their foundations in STEM.</li><br>
-    <li><strong>Physics Club Member:</strong> Actively participating in my university’s physics club, collaborating with peers on projects, outreach, and scientific discussions that foster community and growth in the field.</li><br>
-    <li><strong>Professional Memberships:</strong> Active member of the <em>Society of Physics Students (SPS)</em>, <em>American Physical Society (APS)</em>, and <em>American Astronomical Society (AAS)</em> — staying connected with the broader physics and astronomy research communities.</li>
+    <li><strong>Star-Galaxy Classification with LSST Data:</strong> Investigating classification performance at faint magnitudes (23–27) and analyzing major/minor axis properties for misclassification trends.</li>
+    <li><strong>Data Validation and Truth Table Cross-Matching:</strong> Cross-referencing Rubin simulated data against truth catalogs to assess model accuracy and identify improvements for object classification algorithms.</li>
+    <li><strong>Future Work:</strong> Investigating morphological shape parameters (axis ratios, orientation) and machine learning-based classification refinements in deep optical surveys.</li>
   </ul>
 </section>
+
+  <section id="research-graphs">
+  <h2>Research Visualizations</h2>
+  <p>Below are examples of my analysis on Rubin LSST data:</p>
+  <img src="assets/graphs/star_galaxy_classification.png" alt="Star-Galaxy Classification Graph" style="width:100%; max-width:700px; margin-bottom:20px;">
+  <img src="assets/graphs/magnitude_distribution.png" alt="Magnitude Distribution Graph" style="width:100%; max-width:700px;">
+</section>
+
 
   <section id="blog">
   <h2>Physics in the Wild — Latest Posts (Placeholders)</h2>
@@ -133,40 +137,33 @@
     <li>Physics in Real Life: What Makes a Bicycle Stay Up?</li>
   </ul>
 
-  <h3>Interactive Data Visualization (Plotly Placeholder)</h3>
-  <div id="plotly-chart" style="width:100%;max-width:700px;height:500px;"></div>
-</section>
-
-<!-- Plotly.js Library -->
-<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
-<script>
-  var trace1 = {
-    x: [1, 2, 3, 4, 5],
-    y: [10, 15, 13, 17, 22],
-    mode: 'lines+markers',
-    marker: {color: '#a96ce0'},
-    name: 'Sample Data'
-  };
-
-  var data = [trace1];
-
-  var layout = {
-    title: 'Sample Plotly Chart Placeholder',
-    plot_bgcolor: '#121212',
-    paper_bgcolor: '#121212',
-    font: {color: '#ccc'},
-    xaxis: {title: 'X-Axis'},
-    yaxis: {title: 'Y-Axis'}
-  };
-
-  Plotly.newPlot('plotly-chart', data, layout);
-</script>
 
   <section id="contact">
     <h2>Get in Touch</h2>
     <p>Email: <a href="mailto:jonathan@physicsinthewild.com">jonathan@physicsinthewild.com</a></p>
     <p>Website: <a href="https://www.JonathanJamesGuevaraRodriguez.com">JonathanJamesGuevaraRodriguez.com</a></p>
   </section>
+<section id="cv">
+  <h2>Curriculum Vitae</h2>
+  <p>You can download my latest CV below:</p>
+  <a href="assets/CV-Jonathan-Guevara-Rodriguez.pdf" download class="cv-button">Download My CV</a>
+</section>
+
+<style>
+.cv-button {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 20px;
+  background: #a96ce0;
+  color: #121212;
+  font-weight: bold;
+  border-radius: 5px;
+  text-decoration: none;
+}
+.cv-button:hover {
+  background: #8b5fc2;
+}
+</style>
 
   <footer>
     &copy; 2025 Jonathan James Guevara Rodriguez — Physics In The Wild
