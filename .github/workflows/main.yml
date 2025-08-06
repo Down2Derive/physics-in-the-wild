@@ -8,14 +8,18 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write    # for deploying to gh-pages
+      pages: write
+      id-token: write
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Deploy Github Pages
+      - name: Deploy to GitHub Pages
         uses: ptienchuan/deploy-github-pages-action@1.0.0
         with:
-          source-directory: .         # Change this if your site is in a subfolder (e.g., 'docs')
+          source-directory: .              # Change if your files are in a subfolder
           target-branch: gh-pages
           user-name: github-actions[bot]
           user-email: github-actions[bot]@users.noreply.github.com
