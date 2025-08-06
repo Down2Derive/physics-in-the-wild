@@ -149,8 +149,49 @@
   <section id="research-graphs">
   <h2>Research Visualizations</h2>
   <p>Below are examples of my analysis on Rubin LSST data:</p>
-  <img src="./assets/graphs/McNair Poster.pdf" alt="Star-Galaxy Classification Graph" style="width:100%; max-width:700px; margin-bottom:20px;">
+
+  <!-- Preview image with click-to-expand -->
+  <img id="posterPreview" src="./assets/graphs/poster_preview.png" alt="Preview of McNair Poster"
+       style="width:100%; max-width:700px; cursor:pointer; border-radius:8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+
+  <p style="font-size: 0.9em;">Click the image to expand the full research poster</p>
+
+  <!-- Modal -->
+  <div id="posterModal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; 
+       background:rgba(0,0,0,0.8); z-index:1000; justify-content:center; align-items:center;">
+    
+    <div style="position:relative; max-width:90%; max-height:90%;">
+      <span id="closeModal" style="position:absolute; top:10px; right:20px; font-size:30px; color:white; 
+            cursor:pointer; z-index:1001;">&times;</span>
+
+      <!-- Use an image or an iframe for PDF -->
+      <iframe src="./assets/graphs/McNair Poster.pdf" 
+              style="width:100%; height:80vh; border:none; border-radius:8px;"></iframe>
+    </div>
+  </div>
 </section>
+
+<!-- Script -->
+<script>
+  const preview = document.getElementById('posterPreview');
+  const modal = document.getElementById('posterModal');
+  const close = document.getElementById('closeModal');
+
+  preview.onclick = () => {
+    modal.style.display = 'flex';
+  }
+
+  close.onclick = () => {
+    modal.style.display = 'none';
+  }
+
+  window.onclick = (e) => {
+    if (e.target === modal) {
+      modal.style.display = 'none';
+    }
+  }
+</script>
+
 
 
   <section id="blog">
