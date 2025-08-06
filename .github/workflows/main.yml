@@ -19,7 +19,7 @@ jobs:
       - name: Deploy to GitHub Pages
         uses: ptienchuan/deploy-github-pages-action@1.0.0
         with:
-          source-directory: .              # Change if your files are in a subfolder
+          source-directory: dist              # Change if your files are in a subfolder
           target-branch: gh-pages
           user-name: github-actions[bot]
           user-email: github-actions[bot]@users.noreply.github.com
