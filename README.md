@@ -27,7 +27,7 @@ Visit the site here: [https://www.PhysicsInTheWild.com](https://www.PhysicsInThe
 - Plotly (coming soon for interactive graphs)
 
 ## 📬 Contact
-📧 Email: [jonathan@PhysicsInTheWild.com](mailto:jonathan@PhysicsInTheWild.com)  
+📧 Email: [jonathan@guevararodriguez.com](mailto:jonathan@guevararodriguez.com)
 🌐 Professional Site: [https://www.JonathanJamesGuevaraRodriguez.com](https://www.JonathanJamesGuevaraRodriguez.com)
 
 ---
