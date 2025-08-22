@@ -1,0 +1,8 @@
+{
+  "name": "physics-in-the-wild",
+  "version": "1.0.0",
+  "description": "Static site for Physics In The Wild",
+  "scripts": {
+    "test": "node scripts/checkPages.js"
+  }
+}

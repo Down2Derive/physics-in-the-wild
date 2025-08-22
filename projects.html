@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects - Physics In The Wild</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <canvas id="bg"></canvas>
+  <header>Physics In The Wild</header>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="blog.html">Blog</a>
+    <a href="projects.html">Projects</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <section id="projects">
+    <h2>Research Projects</h2>
+  </section>
+  <section>
+    <h3>Research Assistant | nEXO (June 2025 – Present) – SLAC</h3>
+    <ul>
+      <li><strong>Objective:</strong> Research and development of a neutrino detector component for large-scale implementation in the observation of neutrinoless double beta decay.</li>
+      <li><strong>Tools:</strong> Solidworks, Fusion 360, C++, Python, MATLAB, COMSOL, SimIon</li>
+      <li><strong>Key Contributions:</strong> Collaborated with engineers and researchers to design, simulate, and prototype a charge amplification component to enhance detector efficiency.</li>
+    </ul>
+  </section>
+  <section>
+    <h3>Research Trainee | SLAC National Accelerator Lab (Summer 2024)</h3>
+    <ul>
+      <li><strong>Project:</strong> Image analysis for dark matter research using Python and Jupyter Notebook</li>
+      <li><strong>Outcome:</strong> Built scripts to process astronomical images, identify noise, and enhance detection of faint dark matter signals.</li>
+    </ul>
+  </section>
+  <section>
+    <h3>Data Science Researcher | LSSTC Data Science Fellowship (2024 – 2025)</h3>
+    <ul>
+      <li>Built a fast pipeline for star-galaxy classification using machine learning models to process LSST data.</li>
+      <li>Leveraged Python, NumPy, and Scikit-learn to improve classification accuracy for large-scale datasets.</li>
+    </ul>
+  </section>
+
+  <h2>Research Visualizations</h2>
+  <section>
+    <p>Below are examples of my analysis on Rubin LSST data:</p>
+
+    <!-- Clickable poster preview -->
+    <img id="posterPreview"
+         src="./assets/graphs/poster_preview.png"
+         alt="Preview of McNair Poster"
+         style="width:100%; max-width:700px; cursor:pointer; border-radius:8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+
+    <p style="font-size: 0.9em;">Click the image to view the full research poster</p>
+
+    <!-- Modal -->
+    <div id="posterModal" style="
+         display: none;
+         position: fixed;
+         top: 0; left: 0;
+         width: 100vw; height: 100vh;
+         background: rgba(0, 0, 0, 0.9);
+         z-index: 9999;
+         justify-content: center;
+         align-items: center;
+         padding: 20px;
+         box-sizing: border-box;
+    ">
+      <!-- Close Button -->
+      <span id="closeModal" style="
+        position: absolute;
+        top: 20px;
+        right: 30px;
+        font-size: 40px;
+        color: white;
+        cursor: pointer;
+        z-index: 10000;
+      ">&times;</span>
+
+      <!-- PDF Viewer -->
+      <iframe src="./assets/graphs/McNair Poster.pdf"
+              style="
+                width: 100%;
+                height: 100%;
+                border: none;
+                border-radius: 10px;
+                background: white;
+              "></iframe>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 Jonathan James Guevara Rodriguez — Physics In The Wild
+  </footer>
+
+  <!-- JavaScript for Modal -->
+  <script>
+    const preview = document.getElementById('posterPreview');
+    const modal = document.getElementById('posterModal');
+    const close = document.getElementById('closeModal');
+
+    preview.onclick = () => {
+      modal.style.display = 'flex';
+    }
+
+    close.onclick = () => {
+      modal.style.display = 'none';
+    }
+
+    window.onclick = (e) => {
+      if (e.target === modal) {
+        modal.style.display = 'none';
+      }
+    }
+  </script>
+  <script src="assets/stars.js"></script>
+</body>
+</html>
