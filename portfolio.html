@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jonathan James Guevara Rodriguez — Experimental Physicist</title>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      color-scheme: dark;
+    }
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      font-family: 'Space Grotesk', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: radial-gradient(circle at top left, rgba(39, 94, 254, 0.2), transparent 45%),
+                  radial-gradient(circle at bottom right, rgba(231, 76, 255, 0.2), transparent 40%),
+                  #02010a;
+      color: #f8f9ff;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+    header, section, footer {
+      position: relative;
+      z-index: 1;
+    }
+    .container {
+      width: min(1120px, 92vw);
+      margin: 0 auto;
+    }
+    header {
+      padding: 2rem 0 0;
+    }
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1.5rem;
+      border: 1px solid rgba(137, 207, 240, 0.18);
+      padding: 1.5rem 2rem;
+      border-radius: 12px;
+      backdrop-filter: blur(14px);
+      background: rgba(6, 13, 30, 0.65);
+      box-shadow: 0 24px 60px rgba(15, 50, 112, 0.22);
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: clamp(1rem, 3vw, 2.75rem);
+      margin: 0;
+      padding: 0;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.24em;
+      font-weight: 300;
+    }
+    nav a {
+      color: #dce5ff;
+      transition: color 0.3s ease;
+    }
+    nav a:hover,
+    nav a:focus {
+      color: #76e5ff;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+    .brand-mark {
+      width: 48px;
+      height: 48px;
+      border-radius: 10px;
+      background: linear-gradient(135deg, #275efe, #eb5ffd);
+      display: grid;
+      place-items: center;
+      font-family: 'IBM Plex Mono', monospace;
+      font-weight: 600;
+      box-shadow: 0 12px 24px rgba(235, 95, 253, 0.25);
+    }
+    .hero {
+      position: relative;
+      margin: clamp(3rem, 6vw, 5rem) 0 clamp(4rem, 8vw, 6rem);
+      min-height: 60vh;
+      display: grid;
+      align-items: center;
+    }
+    .hero-grid {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap: 1.5rem;
+    }
+    .hero-content {
+      grid-column: 1 / span 6;
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+    .hero h1 {
+      font-size: clamp(2.75rem, 4vw, 4.5rem);
+      font-weight: 300;
+      line-height: 1.1;
+    }
+    .hero h1 span {
+      color: #76e5ff;
+      font-weight: 500;
+    }
+    .hero p {
+      font-size: 1.1rem;
+      color: #c7d7ff;
+      line-height: 1.6;
+      max-width: 560px;
+    }
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    .btn {
+      padding: 0.9rem 2.4rem;
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      border-radius: 999px;
+      border: 1px solid transparent;
+      transition: transform 0.3s ease, background 0.3s ease, border-color 0.3s ease;
+      font-weight: 500;
+    }
+    .btn-primary {
+      background: linear-gradient(120deg, #eb5ffd, #76e5ff);
+      color: #02010a;
+      box-shadow: 0 18px 45px rgba(118, 229, 255, 0.35);
+    }
+    .btn-outline {
+      border-color: rgba(118, 229, 255, 0.5);
+      color: #76e5ff;
+      background: transparent;
+    }
+    .btn:hover {
+      transform: translateY(-4px);
+    }
+    .hero-media {
+      grid-column: 8 / span 5;
+      position: relative;
+      border-radius: 18px;
+      overflow: hidden;
+      border: 1px solid rgba(137, 207, 240, 0.2);
+      background: linear-gradient(135deg, rgba(39, 94, 254, 0.25), rgba(235, 95, 253, 0.18));
+      box-shadow: 0 40px 120px rgba(10, 22, 60, 0.65);
+    }
+    .hero-media img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      mix-blend-mode: lighten;
+    }
+    .section-heading {
+      text-transform: uppercase;
+      letter-spacing: 0.4em;
+      font-size: 0.9rem;
+      font-weight: 300;
+      color: #9fb4ff;
+      margin-bottom: 0.75rem;
+    }
+    h2 {
+      font-size: clamp(2rem, 3vw, 3rem);
+      font-weight: 300;
+      margin: 0 0 1rem;
+    }
+    .divider {
+      width: 90px;
+      height: 1px;
+      background: linear-gradient(90deg, #76e5ff, #eb5ffd);
+      margin-bottom: 3rem;
+    }
+    .feature-grid {
+      display: grid;
+      gap: 1.5rem;
+    }
+    @media (min-width: 768px) {
+      .feature-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+    @media (min-width: 1024px) {
+      .feature-grid {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+      }
+    }
+    .feature-card {
+      position: relative;
+      padding: 1.75rem;
+      border-radius: 16px;
+      border: 1px solid rgba(118, 229, 255, 0.14);
+      background: linear-gradient(135deg, rgba(10, 20, 40, 0.78), rgba(39, 94, 254, 0.12));
+      min-height: 280px;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      transition: transform 0.35s ease, border-color 0.35s ease, box-shadow 0.35s ease;
+    }
+    .feature-card:hover {
+      transform: translateY(-8px);
+      border-color: rgba(235, 95, 253, 0.35);
+      box-shadow: 0 28px 60px rgba(13, 33, 82, 0.5);
+    }
+    .feature-card h3 {
+      font-size: 1.2rem;
+      font-weight: 400;
+      color: #76e5ff;
+      margin: 0;
+    }
+    .feature-card p {
+      color: #c7d7ff;
+      font-size: 0.95rem;
+      line-height: 1.55;
+    }
+    .feature-card a {
+      color: #eb5ffd;
+      font-size: 0.82rem;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+    }
+    .split-section {
+      display: grid;
+      gap: 2rem;
+      margin-bottom: 4rem;
+    }
+    @media (min-width: 992px) {
+      .split-section {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 2.5rem;
+      }
+    }
+    .timeline {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: grid;
+      gap: 2rem;
+    }
+    .timeline li {
+      position: relative;
+      padding-left: 1.5rem;
+      border-left: 1px solid rgba(118, 229, 255, 0.2);
+    }
+    .timeline li::before {
+      content: '';
+      position: absolute;
+      left: -7px;
+      top: 0.25rem;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #eb5ffd, #76e5ff);
+      box-shadow: 0 0 0 4px rgba(118, 229, 255, 0.12);
+    }
+    .timeline time {
+      display: block;
+      font-size: 0.78rem;
+      letter-spacing: 0.24em;
+      text-transform: uppercase;
+      color: #9fb4ff;
+      margin-bottom: 0.5rem;
+    }
+    .timeline h4 {
+      margin: 0 0 0.5rem;
+      font-weight: 400;
+    }
+    .timeline p {
+      margin: 0;
+      color: #c7d7ff;
+      line-height: 1.5;
+      font-size: 0.95rem;
+    }
+    .community-grid {
+      display: grid;
+      gap: 1.5rem;
+    }
+    @media (min-width: 900px) {
+      .community-grid {
+        grid-template-columns: 1.1fr 0.9fr;
+        gap: 2rem;
+      }
+    }
+    .community-card {
+      padding: 1.75rem;
+      border-radius: 16px;
+      border: 1px solid rgba(118, 229, 255, 0.16);
+      background: linear-gradient(135deg, rgba(8, 12, 28, 0.85), rgba(235, 95, 253, 0.14));
+      backdrop-filter: blur(10px);
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+    .tag-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+    }
+    .tag {
+      padding: 0.35rem 0.9rem;
+      border-radius: 999px;
+      border: 1px solid rgba(118, 229, 255, 0.3);
+      background: rgba(12, 26, 50, 0.6);
+      font-size: 0.75rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: #9fb4ff;
+    }
+    .contact-section {
+      padding: clamp(4rem, 8vw, 6rem) 0;
+      text-align: center;
+    }
+    form {
+      margin: 0 auto;
+      width: min(680px, 100%);
+      display: grid;
+      gap: 1rem;
+      padding: clamp(2rem, 4vw, 3rem);
+      border-radius: 18px;
+      border: 1px solid rgba(118, 229, 255, 0.18);
+      background: linear-gradient(135deg, rgba(7, 15, 35, 0.92), rgba(39, 94, 254, 0.2));
+      backdrop-filter: blur(16px);
+      box-shadow: 0 28px 80px rgba(5, 12, 30, 0.65);
+    }
+    label {
+      font-size: 0.75rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: #9fb4ff;
+      text-align: left;
+    }
+    input,
+    textarea {
+      width: 100%;
+      padding: 0.85rem 1rem;
+      border-radius: 10px;
+      border: 1px solid rgba(118, 229, 255, 0.25);
+      background: rgba(3, 8, 20, 0.8);
+      color: #f8f9ff;
+      font-family: inherit;
+      resize: vertical;
+    }
+    input:focus,
+    textarea:focus {
+      outline: none;
+      border-color: rgba(235, 95, 253, 0.8);
+      box-shadow: 0 0 0 3px rgba(235, 95, 253, 0.2);
+    }
+    footer {
+      margin-top: auto;
+      padding: 2.5rem 0;
+      text-align: center;
+      font-size: 0.85rem;
+      color: #7888c5;
+    }
+    .contact-links {
+      margin-top: 2.5rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1.75rem;
+      color: #c7d7ff;
+      font-size: 0.9rem;
+      letter-spacing: 0.08em;
+    }
+    .contact-links a {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      color: inherit;
+      transition: color 0.3s ease;
+    }
+    .contact-links a:hover {
+      color: #76e5ff;
+    }
+    svg {
+      width: 18px;
+      height: 18px;
+    }
+    @media (max-width: 1024px) {
+      .hero-grid {
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+      }
+      .hero-content,
+      .hero-media {
+        grid-column: auto;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <nav>
+        <div class="brand">
+          <div class="brand-mark">JG</div>
+          <h1 style="font-family: 'IBM Plex Mono', monospace; font-size: 1.15rem; letter-spacing: 0.24em; font-weight: 500;">
+            Jonathan James Guevara Rodriguez
+          </h1>
+        </div>
+        <ul>
+          <li><a href="#research">Research</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#community">Community</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-grid">
+        <div class="hero-content">
+          <span class="section-heading">Experimental Physics &amp; Data-Driven Discovery</span>
+          <h1 id="hero-title">
+            Illuminating elusive matter with <span>hands-on instrumentation</span> and <span>astro data pipelines</span>
+          </h1>
+          <p>
+            I’m Jonathan James Guevara Rodriguez, an experimental physicist and science communicator. From prototyping hardware for the nEXO neutrinoless double beta decay experiment at SLAC to building machine learning pipelines for Rubin Observatory LSST data, I bring curiosity, precision, and storytelling into every investigation.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#contact">Connect</a>
+            <a class="btn btn-outline" href="assets/CV-Jonathan-Guevara-Rodriguez.pdf" download>Download CV</a>
+          </div>
+        </div>
+        <div class="hero-media" aria-hidden="true">
+          <img src="assets/graphs/poster_preview.png" alt="Jonathan presenting Rubin Observatory data visualizations" />
+        </div>
+      </div>
+    </section>
+
+    <section id="research">
+      <span class="section-heading">Current Research Directions</span>
+      <h2>Instrumentation, Cosmic Signals, and Computational Astrophysics</h2>
+      <div class="divider"></div>
+      <div class="feature-grid">
+        <article class="feature-card">
+          <h3>nEXO Charge Amplification Design</h3>
+          <p>
+            Advancing detector hardware for the next-generation neutrinoless double beta decay search. I collaborate with SLAC engineers to prototype a charge amplification component that can be scaled to the full nEXO detector, using Solidworks, COMSOL, and precision bench testing.
+          </p>
+          <a href="projects.html#projects">Project details</a>
+        </article>
+        <article class="feature-card">
+          <h3>Dark Matter Image Analysis</h3>
+          <p>
+            Built Python-based pipelines to process astronomical imagery, suppress noise, and surface subtle dark matter signatures during my SLAC research traineeship. The workflow accelerated our ability to inspect candidate events in large observational datasets.
+          </p>
+          <a href="projects.html#projects">Summer research notes</a>
+        </article>
+        <article class="feature-card">
+          <h3>LSST Star–Galaxy Classification</h3>
+          <p>
+            Developing fast machine learning classifiers through the LSSTC Data Science Fellowship. By integrating NumPy- and scikit-learn–driven models, I’m improving early-stage separation of stellar and galactic sources for Rubin Observatory surveys.
+          </p>
+          <a href="projects.html#projects">Fellowship pipeline</a>
+        </article>
+        <article class="feature-card">
+          <h3>Communicating Cosmic Complexity</h3>
+          <p>
+            Physics In The Wild translates cutting-edge astrophysics into accessible narratives. Through blog essays, talks, and interactive visuals, I bridge research insights with public understanding to keep curiosity thriving.
+          </p>
+          <a href="blog.html">Explore the blog</a>
+        </article>
+      </div>
+    </section>
+
+    <section id="experience" style="margin-top: clamp(4rem, 8vw, 6rem);">
+      <span class="section-heading">Selected Experience</span>
+      <h2>Hands-On Physics Across Labs and Data Centers</h2>
+      <div class="divider"></div>
+      <div class="split-section">
+        <div>
+          <ul class="timeline">
+            <li>
+              <time>2025 — Present</time>
+              <h4>Research Assistant · nEXO Collaboration · SLAC</h4>
+              <p>
+                Engineering and validating detector components that can amplify ionization signals within liquid xenon. Partnering closely with cross-disciplinary teams to iterate on CAD models and translate simulations into build-ready hardware.
+              </p>
+            </li>
+            <li>
+              <time>Summer 2024</time>
+              <h4>Research Trainee · SLAC National Accelerator Laboratory</h4>
+              <p>
+                Designed Python and Jupyter workflows for dark matter image analysis, boosting sensitivity to faint signatures. Delivered insights that informed how the group triages candidate events from large-scale observations.
+              </p>
+            </li>
+            <li>
+              <time>2024 — 2025</time>
+              <h4>Data Science Fellow · LSSTC</h4>
+              <p>
+                Built fast star–galaxy classifiers leveraging LSST data products. Focused on feature engineering, cross-validation, and interpretability to support survey-ready science pipelines.
+              </p>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <div class="community-card" style="height: 100%;">
+            <h3 style="margin: 0; font-weight: 400; color: #76e5ff;">McNair Research Presentation</h3>
+            <p>
+              Shared findings from Rubin Observatory data explorations through the McNair Scholars poster session, distilling complex photometric analyses into compelling visuals and public-friendly explanations.
+            </p>
+            <a href="assets/graphs/McNair Poster.pdf" style="color: #eb5ffd; text-transform: uppercase; letter-spacing: 0.18em; font-size: 0.82rem;">View the poster →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="community" style="margin-top: clamp(4rem, 8vw, 6rem);">
+      <span class="section-heading">Community &amp; Mentorship</span>
+      <h2>Championing First-Generation Scholars in Physics</h2>
+      <div class="divider"></div>
+      <div class="community-grid">
+        <div class="community-card">
+          <h3 style="margin: 0; font-weight: 400; color: #76e5ff;">Physics In The Wild Outreach</h3>
+          <p>
+            As a first-generation college student, I prioritize creating approachable pathways into physics. Through workshops, science communication pieces, and mentorship, I translate intricate theories into experiences that welcome new explorers.
+          </p>
+          <div class="tag-list">
+            <span class="tag">Science storytelling</span>
+            <span class="tag">Mentorship</span>
+            <span class="tag">First-gen advocacy</span>
+          </div>
+        </div>
+        <div class="community-card">
+          <h3 style="margin: 0; font-weight: 400; color: #76e5ff;">Collaborative Learning</h3>
+          <p>
+            Whether I’m debugging code with peers or guiding students through their first dataset, I aim to cultivate inclusive, curiosity-driven research spaces that mirror the collaborative spirit of large scientific collaborations.
+          </p>
+          <div class="tag-list">
+            <span class="tag">Peer-led labs</span>
+            <span class="tag">Inclusive research</span>
+            <span class="tag">Public engagement</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <section id="contact" class="contact-section">
+    <div class="container">
+      <span class="section-heading">Let’s Collaborate</span>
+      <h2>Reach out for research partnerships, data deep dives, or outreach ideas</h2>
+      <div class="divider" style="margin: 1.5rem auto 3rem;"></div>
+      <form>
+        <div>
+          <label for="name">Name</label>
+          <input id="name" name="name" type="text" placeholder="Your name" />
+        </div>
+        <div>
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" placeholder="you@example.com" />
+        </div>
+        <div>
+          <label for="subject">Subject</label>
+          <input id="subject" name="subject" type="text" placeholder="How can we collaborate?" />
+        </div>
+        <div>
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5" placeholder="Share your ideas, questions, or opportunities"></textarea>
+        </div>
+        <div style="text-align: right; margin-top: 1rem;">
+          <button class="btn btn-primary" type="submit">Send Message</button>
+        </div>
+      </form>
+      <div class="contact-links">
+        <a href="mailto:jonathan@guevararodriguez.com">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor"><path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741Z"/></svg>
+          jonathan@guevararodriguez.com
+        </a>
+        <a href="https://www.JonathanJamesGuevaraRodriguez.com" target="_blank" rel="noopener">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor"><path d="M9.5 3a3.5 3.5 0 1 0-3.163 3.485c.055.41.163.81.319 1.194A3.501 3.501 0 0 0 9.5 3Zm-2.77 4.79A3.5 3.5 0 1 0 12.5 5.5a3.48 3.48 0 0 0-.63 2.01 7.6 7.6 0 0 1-1.882-.321 4.5 4.5 0 0 1-3.258.6Z"/></svg>
+          JonathanJamesGuevaraRodriguez.com
+        </a>
+        <a href="assets/CV-Jonathan-Guevara-Rodriguez.pdf" download>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor"><path d="M.5 9.9a.5.5 0 0 1 .5-.5h2.5V1.5A1.5 1.5 0 0 1 5 0h6a1.5 1.5 0 0 1 1.5 1.5v7.9H15a.5.5 0 0 1 .374.832l-6.5 7a.5.5 0 0 1-.748 0l-6.5-7A.5.5 0 0 1 .5 9.9Z"/></svg>
+          Download CV
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    © 2025 Jonathan James Guevara Rodriguez — Physics In The Wild
+  </footer>
+</body>
+</html>
