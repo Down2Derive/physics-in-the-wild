@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 600" role="img" aria-labelledby="title desc">
+  <title id="title">Rubin Observatory star-galaxy classification poster</title>
+  <desc id="desc">Stylized slide summarizing work on Rubin DP0 star and galaxy classification metrics.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#051937" />
+      <stop offset="50%" stop-color="#1f3b73" />
+      <stop offset="100%" stop-color="#642b73" />
+    </linearGradient>
+    <linearGradient id="panel" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#7bdff2" stop-opacity="0.95" />
+      <stop offset="100%" stop-color="#b2f7ef" stop-opacity="0.75" />
+    </linearGradient>
+    <linearGradient id="chart" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#ffe066" stop-opacity="0.9" />
+      <stop offset="100%" stop-color="#ff6b6b" stop-opacity="0.8" />
+    </linearGradient>
+  </defs>
+  <rect width="960" height="600" fill="url(#bg)" rx="32" ry="32" />
+  <rect x="48" y="56" width="408" height="488" rx="28" fill="#0b1f3a" opacity="0.65" />
+  <rect x="88" y="104" width="328" height="160" rx="18" fill="#142c52" opacity="0.85" />
+  <text x="104" y="148" fill="#7bdff2" font-family="'Space Grotesk', 'Helvetica Neue', Arial, sans-serif" font-size="34" font-weight="600">Rubin DP0</text>
+  <text x="104" y="192" fill="#e7f9ff" font-family="'IBM Plex Mono', 'Courier New', monospace" font-size="20">Star–Galaxy Classification</text>
+  <text x="104" y="228" fill="#cddbf7" font-family="'Space Grotesk', 'Helvetica Neue', Arial, sans-serif" font-size="18" opacity="0.85">Assessing ML morphology metrics</text>
+  <rect x="88" y="300" width="328" height="200" rx="18" fill="#142c52" opacity="0.9" />
+  <polyline points="112,476 152,396 208,420 256,348 312,372 368,320" fill="none" stroke="#f9f871" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" />
+  <circle cx="152" cy="396" r="8" fill="#f9f871" />
+  <circle cx="208" cy="420" r="8" fill="#ff9f1c" />
+  <circle cx="256" cy="348" r="8" fill="#f15bb5" />
+  <circle cx="312" cy="372" r="8" fill="#00f5d4" />
+  <circle cx="368" cy="320" r="8" fill="#fee440" />
+  <text x="88" y="540" fill="#b2f7ef" font-family="'IBM Plex Mono', 'Courier New', monospace" font-size="16">ROC / completeness comparison</text>
+  <rect x="500" y="92" width="400" height="416" rx="28" fill="url(#panel)" />
+  <text x="520" y="144" fill="#04315a" font-family="'Space Grotesk', 'Helvetica Neue', Arial, sans-serif" font-size="30" font-weight="600">Takeaways</text>
+  <text x="520" y="192" fill="#052a4f" font-family="'Space Grotesk', 'Helvetica Neue', Arial, sans-serif" font-size="20">• Morphology metrics improve separation</text>
+  <text x="520" y="232" fill="#052a4f" font-family="'Space Grotesk', 'Helvetica Neue', Arial, sans-serif" font-size="20">• DP0.2 data enables rapid iteration</text>
+  <text x="520" y="272" fill="#052a4f" font-family="'Space Grotesk', 'Helvetica Neue', Arial, sans-serif" font-size="20">• Building tooling for community reuse</text>
+  <rect x="520" y="308" width="360" height="176" rx="18" fill="#ffffff" opacity="0.9" />
+  <text x="540" y="352" fill="#0f3057" font-family="'IBM Plex Mono', 'Courier New', monospace" font-size="18">Jonathan J. Guevara Rodriguez</text>
+  <text x="540" y="388" fill="#0f3057" font-family="'IBM Plex Mono', 'Courier New', monospace" font-size="16">Rubin LSST Data Science Research</text>
+  <text x="540" y="424" fill="#0f3057" font-family="'IBM Plex Mono', 'Courier New', monospace" font-size="16">• Metrics pipeline • Validation suite</text>
+</svg>

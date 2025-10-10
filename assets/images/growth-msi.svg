@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 600" role="img" aria-labelledby="title desc">
+  <title id="title">GROWTH-MSI symposium slide illustration</title>
+  <desc id="desc">Abstract slide summarizing feedthrough and phase-change work for nEXO hardware R&D.</desc>
+  <defs>
+    <linearGradient id="growth-bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#120f2d" />
+      <stop offset="100%" stop-color="#2d1753" />
+    </linearGradient>
+    <linearGradient id="growth-overlay" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#d9f4ff" stop-opacity="0.85" />
+      <stop offset="100%" stop-color="#a8caff" stop-opacity="0.75" />
+    </linearGradient>
+  </defs>
+  <rect width="960" height="600" fill="url(#growth-bg)" rx="32" ry="32" />
+  <rect x="64" y="80" width="832" height="440" rx="28" fill="#1e153f" opacity="0.75" />
+  <rect x="112" y="128" width="736" height="344" rx="24" fill="url(#growth-overlay)" />
+  <path d="M160 420 Q240 340 320 380 T480 360 T640 320 T800 340" fill="none" stroke="#4722ff" stroke-width="8" stroke-linecap="round" stroke-dasharray="18 14" />
+  <path d="M160 380 C220 280 340 260 420 320 S620 440 800 300" fill="none" stroke="#ff6ad5" stroke-width="10" stroke-linecap="round" opacity="0.85" />
+  <circle cx="240" cy="320" r="36" fill="#4722ff" opacity="0.9" />
+  <circle cx="420" cy="352" r="44" fill="#ff6ad5" opacity="0.9" />
+  <circle cx="600" cy="300" r="32" fill="#6a5cff" opacity="0.85" />
+  <circle cx="760" cy="340" r="38" fill="#ff9de2" opacity="0.85" />
+  <text x="148" y="200" fill="#120f2d" font-family="'Space Grotesk', 'Helvetica Neue', Arial, sans-serif" font-weight="600" font-size="42">Feedthroughs &amp; Phase Changes</text>
+  <text x="148" y="240" fill="#31275c" font-family="'IBM Plex Mono', 'Courier New', monospace" font-size="20">GROWTH-MSI Symposium · Livermore, CA</text>
+  <text x="148" y="276" fill="#31275c" font-family="'Space Grotesk', 'Helvetica Neue', Arial, sans-serif" font-size="20">• nEXO PCB cryogenic testing</text>
+  <text x="148" y="312" fill="#31275c" font-family="'Space Grotesk', 'Helvetica Neue', Arial, sans-serif" font-size="20">• Thermal gradients &amp; stress design</text>
+  <text x="148" y="348" fill="#31275c" font-family="'Space Grotesk', 'Helvetica Neue', Arial, sans-serif" font-size="20">• Collaboration with SLAC cryo team</text>
+  <rect x="120" y="452" width="720" height="72" rx="16" fill="#1e153f" opacity="0.85" />
+  <text x="148" y="498" fill="#d9f4ff" font-family="'IBM Plex Mono', 'Courier New', monospace" font-size="20">Jonathan J. Guevara Rodriguez · nEXO hardware R&amp;D</text>
+</svg>

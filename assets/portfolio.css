@@ -469,6 +469,14 @@ footer {
     text-align: center;
   }
 
+  .presentation-showcase {
+    grid-template-columns: 1fr;
+  }
+
+  .presentation-card {
+    min-height: 220px;
+  }
+
   .contact-form {
     padding: 1.5rem;
   }
