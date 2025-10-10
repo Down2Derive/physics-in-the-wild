@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 320" role="img" aria-labelledby="title desc">
+  <title id="title">Star–Galaxy Classification Summary</title>
+  <desc id="desc">Conceptual scatter plot comparing classifier confidence for stars and galaxies.</desc>
+  <defs>
+    <linearGradient id="panelGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a1224" />
+      <stop offset="100%" stop-color="#132b4a" />
+    </linearGradient>
+    <radialGradient id="starPoint" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffd966" />
+      <stop offset="100%" stop-color="#f79520" />
+    </radialGradient>
+    <radialGradient id="galaxyPoint" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#95c7ff" />
+      <stop offset="100%" stop-color="#2f6ff3" />
+    </radialGradient>
+  </defs>
+  <rect width="480" height="320" rx="24" fill="url(#panelGradient)" />
+  <rect x="40" y="48" width="400" height="224" rx="18" fill="rgba(7,16,36,0.7)" stroke="rgba(148,200,255,0.35)" />
+  <g stroke="rgba(255,255,255,0.08)" stroke-width="1">
+    <line x1="80" y1="96" x2="400" y2="96" />
+    <line x1="80" y1="144" x2="400" y2="144" />
+    <line x1="80" y1="192" x2="400" y2="192" />
+    <line x1="80" y1="240" x2="400" y2="240" />
+    <line x1="120" y1="80" x2="120" y2="256" />
+    <line x1="200" y1="80" x2="200" y2="256" />
+    <line x1="280" y1="80" x2="280" y2="256" />
+    <line x1="360" y1="80" x2="360" y2="256" />
+  </g>
+  <g font-family="'Space Grotesk', sans-serif" font-size="14" fill="#9fb8ff">
+    <text x="80" y="276">0.0</text>
+    <text x="180" y="276">0.5</text>
+    <text x="340" y="276">1.0</text>
+    <text x="48" y="108">0.9</text>
+    <text x="48" y="204">0.5</text>
+  </g>
+  <text x="240" y="300" text-anchor="middle" font-family="'IBM Plex Mono', monospace" font-size="13" fill="#d0dcff">Classifier Confidence</text>
+  <text transform="translate(28 160) rotate(-90)" text-anchor="middle" font-family="'IBM Plex Mono', monospace" font-size="13" fill="#d0dcff">Ground Truth Probability</text>
+  <g>
+    <circle cx="140" cy="220" r="14" fill="url(#starPoint)" opacity="0.9" />
+    <circle cx="176" cy="196" r="10" fill="url(#starPoint)" opacity="0.8" />
+    <circle cx="216" cy="180" r="12" fill="url(#starPoint)" opacity="0.85" />
+    <circle cx="256" cy="148" r="9" fill="url(#starPoint)" opacity="0.8" />
+    <circle cx="292" cy="120" r="11" fill="url(#starPoint)" opacity="0.9" />
+    <circle cx="324" cy="104" r="13" fill="url(#starPoint)" opacity="0.95" />
+  </g>
+  <g>
+    <circle cx="172" cy="228" r="12" fill="url(#galaxyPoint)" opacity="0.85" />
+    <circle cx="212" cy="212" r="14" fill="url(#galaxyPoint)" opacity="0.9" />
+    <circle cx="252" cy="190" r="12" fill="url(#galaxyPoint)" opacity="0.82" />
+    <circle cx="296" cy="166" r="10" fill="url(#galaxyPoint)" opacity="0.8" />
+    <circle cx="332" cy="144" r="13" fill="url(#galaxyPoint)" opacity="0.88" />
+    <circle cx="360" cy="118" r="15" fill="url(#galaxyPoint)" opacity="0.95" />
+  </g>
+  <rect x="64" y="64" width="120" height="38" rx="12" fill="rgba(12,32,68,0.9)" stroke="rgba(148,200,255,0.4)" />
+  <text x="124" y="89" text-anchor="middle" font-family="'Space Grotesk', sans-serif" font-size="14" fill="#dbe6ff">DP0 Validation</text>
+  <g transform="translate(72 276)" font-family="'Space Grotesk', sans-serif" font-size="13">
+    <circle cx="0" cy="0" r="6" fill="url(#starPoint)" />
+    <text x="14" y="5" fill="#ffdede">Stars</text>
+    <circle cx="88" cy="0" r="6" fill="url(#galaxyPoint)" />
+    <text x="102" y="5" fill="#d0dcff">Galaxies</text>
+  </g>
+</svg>
