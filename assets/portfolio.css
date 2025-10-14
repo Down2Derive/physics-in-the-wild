@@ -302,6 +302,7 @@ section.page-section {
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
 }
 
+
 .presentation-card {
   position: relative;
   border-radius: var(--radius-md);
@@ -309,14 +310,16 @@ section.page-section {
   border: 1px solid rgba(137, 207, 240, 0.24);
   background: var(--bg-panel-alt);
   box-shadow: 0 26px 60px rgba(10, 22, 60, 0.4);
+  aspect-ratio: 3 / 4;
   min-height: 280px;
 }
 
 .presentation-card img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
   display: block;
+  background: radial-gradient(circle at center, rgba(12, 27, 60, 0.88) 0%, rgba(4, 10, 25, 0.95) 70%);
   filter: saturate(120%);
   transition: transform var(--transition), filter var(--transition);
 }
@@ -325,14 +328,14 @@ section.page-section {
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, rgba(4, 10, 25, 0) 0%, rgba(4, 10, 25, 0.82) 100%);
-  opacity: 0.85;
+  background: linear-gradient(180deg, rgba(4, 10, 25, 0.08) 25%, rgba(4, 10, 25, 0.88) 100%);
+  opacity: 0.9;
   transition: opacity var(--transition);
 }
 
 .presentation-card:hover img {
-  transform: scale(1.05);
-  filter: saturate(145%);
+  transform: scale(1.02);
+  filter: saturate(140%);
 }
 
 .presentation-card:hover::after {
@@ -454,6 +457,55 @@ section.page-section {
 .split-panel h3 {
   margin-top: 0;
   font-size: 1.4rem;
+}
+
+.featured-rotator {
+  position: relative;
+  border-radius: var(--radius-md);
+  border: 1px solid rgba(137, 207, 240, 0.22);
+  box-shadow: 0 30px 80px rgba(10, 22, 60, 0.55);
+  overflow: hidden;
+  aspect-ratio: 3 / 4;
+  background: radial-gradient(circle at top, rgba(39, 94, 254, 0.12), transparent 62%),
+    radial-gradient(circle at bottom, rgba(235, 95, 253, 0.12), transparent 55%),
+    rgba(4, 10, 25, 0.85);
+}
+
+.featured-rotator img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  opacity: 0;
+  transition: opacity 0.8s ease;
+  animation: featuredShowcase 24s infinite;
+  background: rgba(4, 10, 25, 0.85);
+}
+
+.featured-rotator img:nth-child(1) { animation-delay: 0s; }
+.featured-rotator img:nth-child(2) { animation-delay: 6s; }
+.featured-rotator img:nth-child(3) { animation-delay: 12s; }
+.featured-rotator img:nth-child(4) { animation-delay: 18s; }
+
+@keyframes featuredShowcase {
+  0%, 18% {
+    opacity: 1;
+  }
+  25%, 100% {
+    opacity: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .featured-rotator img {
+    animation: none;
+    opacity: 1;
+  }
+
+  .featured-rotator img:not(:first-child) {
+    display: none;
+  }
 }
 
 .contact-grid {
