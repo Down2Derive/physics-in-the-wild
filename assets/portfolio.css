@@ -331,6 +331,7 @@ section.page-section {
   width: auto;
   height: auto;
   display: block;
+  background: radial-gradient(circle at center, rgba(12, 27, 60, 0.88) 0%, rgba(4, 10, 25, 0.95) 70%);
   filter: saturate(120%);
   transition: transform var(--transition), filter var(--transition);
 }
