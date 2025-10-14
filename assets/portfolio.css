@@ -175,6 +175,16 @@ header {
   gap: 1rem;
 }
 
+.hero-actions .btn-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.hero-actions .btn-group .btn {
+  padding-inline: 1.6rem;
+}
+
 .btn {
   padding: 0.85rem 2.4rem;
   font-size: 0.85rem;
