@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 320" role="img" aria-labelledby="title desc">
+  <title id="title">Stylized portrait of Jonathan James Guevara Rodriguez</title>
+  <desc id="desc">Vector illustration with cosmic gradients echoing Rubin Observatory palette.</desc>
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#101c3f" />
+      <stop offset="45%" stop-color="#1a3e64" />
+      <stop offset="100%" stop-color="#6f2ab4" />
+    </linearGradient>
+    <linearGradient id="faceGradient" x1="30%" y1="15%" x2="70%" y2="90%">
+      <stop offset="0%" stop-color="#fbd6c6" />
+      <stop offset="60%" stop-color="#f4a077" />
+      <stop offset="100%" stop-color="#ce7852" />
+    </linearGradient>
+    <linearGradient id="shirtGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f3525a" />
+      <stop offset="100%" stop-color="#a8255d" />
+    </linearGradient>
+    <radialGradient id="cheekLight" cx="40%" cy="45%" r="35%">
+      <stop offset="0%" stop-color="#ffd9c9" stop-opacity="0.6" />
+      <stop offset="100%" stop-color="#ffd9c9" stop-opacity="0" />
+    </radialGradient>
+  </defs>
+  <rect width="320" height="320" rx="28" fill="url(#bgGradient)" />
+  <circle cx="160" cy="140" r="112" fill="#14254f" opacity="0.55" />
+  <path d="M70 280c22-52 60-80 90-80s68 28 90 80" fill="url(#shirtGradient)" />
+  <path d="M105 154c0 54 28 90 55 90s55-36 55-90V132c0-32-25-58-55-58s-55 26-55 58v22z" fill="url(#faceGradient)" />
+  <ellipse cx="160" cy="150" rx="68" ry="66" fill="url(#cheekLight)" />
+  <path d="M160 74c-34 0-68 22-72 70 16-18 35-26 72-26s56 8 72 26c-4-48-38-70-72-70z" fill="#1c1a2d" />
+  <path d="M124 150c8 0 14 6 14 14s-6 14-14 14-14-6-14-14 6-14 14-14zm72 0c8 0 14 6 14 14s-6 14-14 14-14-6-14-14 6-14 14-14z" fill="#1b1f33" />
+  <path d="M140 210c12 10 28 10 40 0" fill="none" stroke="#b6574b" stroke-width="6" stroke-linecap="round" />
+  <path d="M138 116c-10-4-22-4-34 4 4-18 18-30 34-30s28 10 34 30c-12-8-24-8-34-4zm44 0c-10-4-22-4-34 4 6-20 20-30 34-30s30 12 34 30c-12-8-24-8-34-4z" fill="#201d35" opacity="0.85" />
+  <circle cx="108" cy="146" r="6" fill="#fefefe" opacity="0.55" />
+  <circle cx="212" cy="146" r="6" fill="#fefefe" opacity="0.55" />
+</svg>

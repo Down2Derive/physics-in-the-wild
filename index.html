@@ -3,67 +3,123 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Physics In The Wild</title>
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
-  <link rel="icon" type="image/png" href="assets/favicon.png">
-  <link rel="stylesheet" href="assets/style.css">
+  <title>Jonathan James Guevara Rodriguez — Physics In The Wild</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=Space+Grotesk:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="stylesheet" href="assets/portfolio.css">
 </head>
 <body>
-  <canvas id="bg"></canvas>
-  <header>Physics In The Wild</header>
+  <header>
+    <div class="container nav-container">
+      <div class="brand">
+        <div class="brand-mark">JG</div>
+        <span>Physics in the Wild</span>
+      </div>
+      <nav>
+        <ul class="nav-links">
+          <li><a class="nav-link active" href="index.html">Home</a></li>
+          <li><a class="nav-link" href="research.html">Research</a></li>
+          <li><a class="nav-link" href="publications.html">Publications</a></li>
+          <li><a class="nav-link" href="community.html">Community</a></li>
+          <li><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="blog.html">Blog</a>
-    <a href="projects.html">Projects</a>
-    <a href="contact.html">Contact</a>
-  </nav>
+  <main>
+    <section class="page-hero">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <span class="eyebrow">Undergraduate Research · Cosmology · Science Communication</span>
+          <h1>Jonathan James <span>Guevara Rodriguez</span></h1>
+          <p>
+            First-generation physics major exploring how instrumentation and data analysis intersect. I split my time between a
+            nEXO summer research internship at SLAC, Rubin Observatory LSST data investigations, and outreach that keeps science accessible.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="research.html">Explore Research</a>
+            <a class="btn btn-outline" href="assets/CV-Jonathan-Guevara-Rodriguez.pdf" download>Download CV</a>
+          </div>
+          <div class="stat-badges">
+            <span class="stat-badge">nEXO Summer Research · SLAC</span>
+            <span class="stat-badge">Rubin LSST Data Science</span>
+            <span class="stat-badge">McNair &amp; Cal-Bridge Scholar</span>
+          </div>
+        </div>
+        <div class="hero-media">
+          <img src="assets/images/jonathan-headshot-front.svg" alt="Stylized portrait illustration of Jonathan James Guevara Rodriguez">
+        </div>
+      </div>
+    </section>
 
-  <section id="home">
-    <h2>Exploring the Dark Corners of the Universe</h2>
-    <p>Communicating complex physics with curiosity and creativity.</p>
-  </section>
+    <section class="page-section">
+      <div class="container">
+        <div class="section-heading">
+          <span class="eyebrow">Focus Areas</span>
+          <h2>Hands-on learning that connects hardware and sky surveys</h2>
+          <p>
+            Coursework, internships, and independent study keep me toggling between lab benches and code notebooks. Each project sharpens how I think about the physics questions that motivate graduate study.
+          </p>
+        </div>
+        <div class="card-grid" style="grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));">
+          <article class="card">
+            <h3>nEXO Summer Research Internship</h3>
+            <p>
+              Supporting neutrino detector component studies at SLAC by learning PCB design, impedance matching, and CAD workflows alongside the nEXO team.
+            </p>
+            <div class="card-footer">SLAC · PCB Design · CAD</div>
+          </article>
+          <article class="card">
+            <h3>Rubin LSST Data Pipelines</h3>
+            <p>
+              Evaluating star–galaxy classification accuracy in simulated Rubin LSST data and building Python workflows that help surface redshifted objects.
+            </p>
+            <div class="card-footer">Python · NumPy · Scikit-learn</div>
+          </article>
+          <article class="card">
+            <h3>Science Communication</h3>
+            <p>
+              Tutoring, APS Ambassador programming, and community presentations that translate complex physics into actionable invitations for new learners.
+            </p>
+            <div class="card-footer">APS Ambassador · Mentorship · Outreach</div>
+          </article>
+        </div>
+      </div>
+    </section>
 
-<section id="contact">
-  <h2>Get in Touch</h2>
-  <p>Email: <a href="mailto:jonathan@guevararodriguez.com">jonathan@guevararodriguez.com</a></p>
-  <p>Website: <a href="https://www.JonathanJamesGuevaraRodriguez.com">JonathanJamesGuevaraRodriguez.com</a></p>
-  </section>
-<section id="cv">
-  <h2>Curriculum Vitae</h2>
-  <p>You can download my latest CV below:</p>
-  <a href="assets/CV-Jonathan-Guevara-Rodriguez.pdf" download class="cv-button">Download My CV</a>
-</section>
-
-<style>
-.cv-button {
-  display: inline-block;
-  margin-top: 10px;
-  padding: 10px 20px;
-  background: #a96ce0;
-  color: #121212;
-  font-weight: bold;
-  border-radius: 5px;
-  text-decoration: none;
-}
-.cv-button:hover {
-  background: #8b5fc2;
-}
-  #posterModal {
-  animation: fadeIn 0.3s ease-in-out;
-}
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
-}
-
-</style>
+    <section class="page-section">
+      <div class="container split-panel">
+        <div>
+          <span class="eyebrow">Featured Insight</span>
+          <h3>Curiosity powered by data, hardware, and community</h3>
+          <p>
+            I’m most energized when I can troubleshoot a circuit in the morning and debug a data pipeline at night. The blend of hands-on making, quantitative analysis, and science communication keeps me grounded in why this work matters.
+          </p>
+        </div>
+        <div>
+          <h4 style="margin-bottom: 1rem; font-weight: 500;">Quick Links</h4>
+          <div class="card-grid" style="grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem;">
+            <a class="card" style="gap: 0.75rem;" href="publications.html">
+              <h3 style="margin: 0;">CV &amp; Presentations</h3>
+              <p style="margin: 0;">Research resume, ORCID profile, and the conferences where I share my work.</p>
+              <div class="card-footer">View Materials →</div>
+            </a>
+            <a class="card" style="gap: 0.75rem;" href="community.html">
+              <h3 style="margin: 0;">Community Impact</h3>
+              <p style="margin: 0;">Mentorship, ambassador programs, and student leadership roles that amplify new voices in physics.</p>
+              <div class="card-footer">Explore Community →</div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
 
   <footer>
-    &copy; 2025 Jonathan James Guevara Rodriguez — Physics In The Wild
+    © 2025 Jonathan James Guevara Rodriguez — Physics in the Wild
   </footer>
-
-  <script src="assets/stars.js"></script>
 </body>
 </html>

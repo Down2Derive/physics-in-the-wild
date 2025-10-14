@@ -3,38 +3,107 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact - Physics In The Wild</title>
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
-  <link rel="icon" type="image/png" href="assets/favicon.png">
-  <link rel="stylesheet" href="assets/style.css">
+  <title>Contact — Jonathan James Guevara Rodriguez</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=Space+Grotesk:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="stylesheet" href="assets/portfolio.css">
 </head>
 <body>
-  <canvas id="bg"></canvas>
-  <header>Physics In The Wild</header>
+  <header>
+    <div class="container nav-container">
+      <div class="brand">
+        <div class="brand-mark">JG</div>
+        <span>Physics in the Wild</span>
+      </div>
+      <nav>
+        <ul class="nav-links">
+          <li><a class="nav-link" href="index.html">Home</a></li>
+          <li><a class="nav-link" href="research.html">Research</a></li>
+          <li><a class="nav-link" href="publications.html">Publications</a></li>
+          <li><a class="nav-link" href="community.html">Community</a></li>
+          <li><a class="nav-link active" href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="blog.html">Blog</a>
-    <a href="projects.html">Projects</a>
-    <a href="contact.html">Contact</a>
-  </nav>
+  <main>
+    <section class="page-hero">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <span class="eyebrow">Collaboration · Speaking · Mentorship</span>
+          <h1>Let’s connect</h1>
+          <p>
+            I’m preparing for graduate applications while contributing to nEXO and Rubin Observatory projects. Reach out about collaborations, presentations, or mentorship conversations and I’ll respond within a couple of days.
+          </p>
+          <div class="stat-badges">
+            <span class="stat-badge">McNair Scholar</span>
+            <span class="stat-badge">Cal-Bridge Scholar</span>
+          </div>
+        </div>
+        <div class="hero-media">
+          <img src="assets/images/jonathan-headshot-front.svg" alt="Stylized portrait illustration of Jonathan James Guevara Rodriguez ready to connect">
+        </div>
+      </div>
+    </section>
 
-  <section id="contact">
-    <h2>Get in Touch</h2>
-    <p>Email: <a href="mailto:jonathan@physicsinthewild.com">jonathan@guevararodriguez.com</a></p>
-    <p>Website: <a href="https://www.JonathanJamesGuevaraRodriguez.com">JonathanJamesGuevaraRodriguez.com</a></p>
-  </section>
-  <section id="cv">
-    <h2>Curriculum Vitae</h2>
-    <p>You can download my latest CV below:</p>
-    <a href="assets/CV-Jonathan-Guevara-Rodriguez.pdf" download class="cv-button">Download My CV</a>
-  </section>
+    <section class="page-section">
+      <div class="container contact-grid">
+        <div class="contact-info">
+          <div class="contact-card">
+            <h3 style="margin-top: 0; margin-bottom: 0.75rem;">Direct contact</h3>
+            <p style="margin: 0 0 0.75rem; color: var(--text-secondary);">
+              Email is the fastest way to reach me. I welcome questions about Rubin Observatory data science, nEXO instrumentation, and outreach collaborations.
+            </p>
+            <p style="margin: 0.35rem 0;">
+              📧 <a href="mailto:jjrodriguez1617@gmail.com">jjrodriguez1617@gmail.com</a>
+            </p>
+            <p style="margin: 0.35rem 0;">
+              🎓 <a href="mailto:jrodriguez196@csustan.edu">jrodriguez196@csustan.edu</a>
+            </p>
+            <p style="margin: 0.35rem 0;">
+              🛰️ <a href="https://www.physicsinthewild.com" target="_blank" rel="noopener">physicsinthewild.com</a>
+            </p>
+            <p style="margin: 0.35rem 0;">
+              🧭 <a href="https://orcid.org/0009-0008-5372-499X" target="_blank" rel="noopener">ORCID: 0009-0008-5372-499X</a>
+            </p>
+          </div>
+          <div class="contact-card">
+            <h3 style="margin-top: 0; margin-bottom: 0.75rem;">Downloadables</h3>
+            <ul class="detail-list" style="padding-left: 1rem;">
+              <li><a href="assets/CV-Jonathan-Guevara-Rodriguez.pdf" download>Curriculum Vitae (PDF)</a></li>
+              <li><a href="assets/graphs/mcnair-poster.pdf" target="_blank" rel="noopener">McNair Research Poster (PDF)</a></li>
+              <li><a href="assets/McNair-Scholars-Poster.pptx" download>McNair Poster (PPTX)</a></li>
+            </ul>
+          </div>
+        </div>
+        <form class="contact-form">
+          <div>
+            <label for="name">Name</label>
+            <input id="name" name="name" type="text" autocomplete="name" required>
+          </div>
+          <div>
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" autocomplete="email" required>
+          </div>
+          <div>
+            <label for="subject">Subject</label>
+            <input id="subject" name="subject" type="text" required>
+          </div>
+          <div>
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+          </div>
+          <button class="btn btn-primary" type="submit">Send Message</button>
+        </form>
+      </div>
+    </section>
+  </main>
 
   <footer>
-    &copy; 2025 Jonathan James Guevara Rodriguez — Physics In The Wild
+    © 2025 Jonathan James Guevara Rodriguez — Physics in the Wild
   </footer>
-
-  <script src="assets/stars.js"></script>
 </body>
 </html>
