@@ -161,7 +161,6 @@
       height: 100%;
       object-fit: cover;
       display: block;
-      mix-blend-mode: lighten;
     }
     .section-heading {
       text-transform: uppercase;
@@ -229,6 +228,61 @@
       font-size: 0.82rem;
       text-transform: uppercase;
       letter-spacing: 0.18em;
+    }
+    .media-gallery {
+      display: grid;
+      gap: 1.5rem;
+      margin-bottom: 4rem;
+    }
+    @media (min-width: 768px) {
+      .media-gallery {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+    @media (min-width: 1100px) {
+      .media-gallery {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+    }
+    .media-card {
+      border-radius: 18px;
+      background: rgba(6, 13, 30, 0.7);
+      border: 1px solid rgba(137, 207, 240, 0.18);
+      box-shadow: 0 24px 60px rgba(10, 22, 60, 0.45);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      min-height: 100%;
+    }
+    .media-card img {
+      width: 100%;
+      height: 240px;
+      object-fit: cover;
+      display: block;
+    }
+    .media-card-content {
+      padding: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+    .media-card h3 {
+      margin: 0;
+      font-weight: 500;
+      color: #76e5ff;
+    }
+    .media-card p {
+      margin: 0;
+      color: #c7d7ff;
+      line-height: 1.6;
+      font-size: 0.95rem;
+    }
+    .media-card .card-footer {
+      margin-top: 0.5rem;
+      font-size: 0.8rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: #76e5ff;
     }
     .split-section {
       display: grid;
@@ -434,7 +488,7 @@
           </div>
         </div>
         <div class="hero-media" aria-hidden="true">
-          <img src="assets/graphs/poster_preview.png" alt="Jonathan presenting Rubin Observatory data visualizations" />
+          <img src="assets/images/jonathan-headshot-1.svg" alt="Professional headshot of Jonathan James Guevara Rodriguez in a red shirt with arms crossed" />
         </div>
       </div>
     </section>
@@ -511,9 +565,47 @@
             <p>
               Shared findings from Rubin Observatory data explorations through the McNair Scholars poster session, distilling complex photometric analyses into compelling visuals and public-friendly explanations.
             </p>
-            <a href="assets/graphs/McNair Poster.pdf" style="color: #eb5ffd; text-transform: uppercase; letter-spacing: 0.18em; font-size: 0.82rem;">View the poster →</a>
+            <a href="assets/graphs/mcnair-poster.pdf" style="color: #eb5ffd; text-transform: uppercase; letter-spacing: 0.18em; font-size: 0.82rem;">View the poster →</a>
           </div>
         </div>
+      </div>
+    </section>
+
+    <section id="presentations" style="margin-top: clamp(4rem, 8vw, 6rem);">
+      <span class="section-heading">Featured Presentations</span>
+      <h2>Sharing research at conferences and workshops</h2>
+      <div class="divider"></div>
+      <div class="media-gallery">
+        <article class="media-card">
+          <img src="assets/Assessing%20Star%E2%80%93Galaxy%20Classification%20in%20Rubin%20Observatory%20DP0%20Data.gif" alt="Assessing Star–Galaxy Classification in Rubin Observatory DP0 Data presentation by Jonathan James Guevara Rodriguez" loading="lazy" />
+          <div class="media-card-content">
+            <h3>Assessing Star–Galaxy Classification in Rubin DP0</h3>
+            <p>
+              Slide deck turned animated GIF from my Rubin Observatory DP0 analysis, highlighting feature engineering and model validation for early star–galaxy separation.
+            </p>
+            <div class="card-footer">Rubin Observatory · Data Science</div>
+          </div>
+        </article>
+        <article class="media-card">
+          <img src="assets/Rodriguez%5EJ%20Jonathan%20-%20GROWTH%20Presentation.gif" alt="GROWTH presentation by Jonathan James Guevara Rodriguez on feed-throughs and phase changes" loading="lazy" />
+          <div class="media-card-content">
+            <h3>GROWTH: Feed-Throughs &amp; Phase Changes</h3>
+            <p>
+              Captures the hardware prototyping story I presented through the GROWTH program, focusing on cryogenic feed-through performance and iterative design.
+            </p>
+            <div class="card-footer">Instrumentation · GROWTH Program</div>
+          </div>
+        </article>
+        <article class="media-card">
+          <img src="assets/FWS.jpg" alt="Jonathan James Guevara Rodriguez presenting at the 2025 APS Far West Section meeting" loading="lazy" />
+          <div class="media-card-content">
+            <h3>APS Far West Section Poster (2025)</h3>
+            <p>
+              Poster session from the 2025 APS Far West Section meeting, where I discussed undergraduate progress on Rubin Observatory data pipelines and community outreach.
+            </p>
+            <div class="card-footer">APS Far West · 2025</div>
+          </div>
+        </article>
       </div>
     </section>
 
